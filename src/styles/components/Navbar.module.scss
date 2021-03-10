@@ -1,0 +1,22 @@
+@import '../variables';
+@import '../mixins';
+
+.container {
+  width: $navbar-size;
+  height: 100vh;
+  border-right: 1px solid rgba($white-dark, .25);
+  padding: 1.25rem 0;
+  box-shadow: 2px 2px 5px rgba(#000, .2);
+
+  @include flex-center {
+    flex-direction: column;
+  }
+
+  .items {
+    margin-top: 3rem;
+
+    @include flex-center {
+      flex-direction: column;
+    }
+  }
+}
