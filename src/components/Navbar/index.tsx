@@ -6,7 +6,7 @@ import NavItem from './NavItem';
 
 const Navbar: React.FC = () => {
   return (
-    <nav className={style.container}>
+    <aside className={style.container}>
       <Link href="/">
         <a>
           <Image src="/logo.svg" alt="do.to Logo" width={25} height={25} />
@@ -26,7 +26,7 @@ const Navbar: React.FC = () => {
           <BsPeopleFill />
         </NavItem>
       </div>
-    </nav>
+    </aside>
   );
 };
 

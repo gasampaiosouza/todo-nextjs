@@ -1,0 +1,23 @@
+@use '../variables' as *;
+
+.container {
+  width: 100%;
+  margin-bottom: 5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .right-side {
+    //...
+
+    .icon {
+      color: $white;
+      background: $main;
+      cursor: pointer;
+      font-size: 2rem;
+      padding: .1rem;
+      border-radius: 50%;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+@use '../variables' as *;
+
+.container {
+  padding: 4rem;
+
+  .task {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    transition: 0.25s ease-in-out;
+
+    &:hover {
+      background: rgba($white-dark, 0.15);
+    }
+
+    .checkbox {
+      $checkbox-size: 25px;
+
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: $checkbox-size;
+      height: $checkbox-size;
+      border-radius: 50%;
+      border: 1px solid $white-dark;
+      color: $white-dark;
+      background: #2b2e43;
+      margin-right: 0.8rem;
+
+      &.completed {
+        color: $main;
+        border-color: $main;
+        background: #16344d;
+      }
+    }
+
+    .content {
+      display: flex;
+      align-items: center;
+    }
+  }
+}

@@ -1,9 +1,15 @@
 import { NextPage } from 'next';
 import Head from 'next/head';
+import { useRouter } from 'next/router';
+import React from 'react';
 import style from 'styles/components/Home.module.scss';
 import Navbar from '../components/Navbar/index';
+import Tasks from '../components/Tasks';
+import ViewTask from '../components/Tasks/ViewTask';
 
  const Index: NextPage = () => {
+  const { query } = useRouter();
+
    return (
      <div className={style.container}>
        <Head>
@@ -15,9 +21,11 @@ import Navbar from '../components/Navbar/index';
          />
        </Head>
 
-       <main className={style.main}>
+       <div className={style.main}>
          <Navbar />
-       </main>
+         <Tasks />
+         {query.taskID && <ViewTask taskID={String(query.taskID)} />}
+       </div>
      </div>
    );
  };
